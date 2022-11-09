@@ -8,7 +8,7 @@ t1.speed(0)
 t.bgcolor('black')
 
 colors = [
-    'blue', 
+    'blue',
     'green',
     'red',
     'pink',
@@ -28,6 +28,7 @@ colors = [
     'cyan',
     'DarkOrange'
 ]
+
 
 def logo(x, y, s):
     t1.color(colors[random.randint(0, len(colors) - 1)])
@@ -79,10 +80,13 @@ def logo(x, y, s):
 
     t1.setheading(0)
 
+
 def main():
     for n in range(0, 50):
-        logo(random.randint(-250, 250), random.randint(-250, 250), random.uniform(0.01, 1))
+        logo(random.randint(-250, 250),
+             random.randint(-250, 250), random.uniform(0.01, 1))
     t.exitonclick()
+
 
 if __name__ == '__main__':
     main()
