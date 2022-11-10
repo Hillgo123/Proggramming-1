@@ -15,6 +15,6 @@ def fibbonaci(n):
 
 if __name__ == '__main__':
     start = time.time()
-    for i in fibbonaci(100000000000000000):
+    for i in fibbonaci(1000):
         print(i)
-    print(f'It took {time.time() - start} seconds to execute code')
+    print(f'It took {time.time() - start:.2f} seconds to execute code')
