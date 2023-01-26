@@ -32,3 +32,23 @@ def six():
 
     for word, count in sorted_word_count:
         print(word, count)
+
+
+def seven():
+    with open('main.txt', 'r') as f:
+        data = f.read()
+
+    words = data.split()
+    word_count = {}
+    for word in words:
+        if word.isalpha():
+            if word in word_count:
+                word_count[word] += 1
+            else:
+                word_count[word] = 1
+
+    sorted_word_count = sorted(
+        word_count.items(), key=lambda x: x[1], reverse=True)
+
+    for word, count in sorted_word_count:
+        print(word, count)
